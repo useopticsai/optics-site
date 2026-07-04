@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -23,7 +25,9 @@ export default function RootLayout({
       className={`${nunito.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-cream text-forest font-sans">
-        {children}
+        <Navbar />
+        <div className="flex flex-col flex-1">{children}</div>
+        <Footer />
       </body>
     </html>
   );
