@@ -1,26 +1,28 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Backgrounds — measured from Truffle */
+  --color-cream: rgb(243, 240, 234);
+  /* #F3F0EA page background */
+  --color-sand: rgb(234, 229, 218);
+  /* #EAE5DA mid-ground sections */
+  --color-deep: rgb(221, 214, 197);
+  /* #DDD6C5 deepest layer */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  /* Borders — the soft grey-brown hairline between sections */
+  --color-line: rgb(216, 210, 195);
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Text — YOUR green, not Truffle's ink */
+  --color-forest: oklch(38% 0.07 150);
+  --color-forest-soft: oklch(48% 0.06 150);
+
+  /* Dark contrast section (Truffle uses near-black espresso here) */
+  --color-espresso: rgb(33, 29, 25);
+  /* #211D19 */
+
+  /* Accent — terracotta CTA */
+  --color-terracotta: rgb(196, 98, 62);
+  /* #C4623E */
 }
