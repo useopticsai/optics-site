@@ -12,6 +12,7 @@ export default function Technology() {
 
   return (
     <section
+      id="technology"
       ref={ref}
       aria-label="Technology"
       className="bg-transparent border-b border-line px-6 py-24 md:py-32"

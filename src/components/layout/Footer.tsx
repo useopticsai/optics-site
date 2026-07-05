@@ -10,7 +10,7 @@ const FOOTER_COLUMNS = [
   {
     heading: "Company",
     links: NAV_LINKS.filter((l) =>
-      ["/about", "/team", "/careers"].includes(l.href)
+      ["/mission", "/about", "/team", "/careers"].includes(l.href)
     ),
   },
   {

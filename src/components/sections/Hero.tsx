@@ -22,7 +22,7 @@ export default function Hero() {
       className="
         relative overflow-hidden bg-transparent
         border-b border-line
-        px-6 pt-12 pb-20 md:pt-16 md:pb-28
+        px-6 pt-12 pb-10 md:pt-16 md:pb-14
       "
     >
       <div className="relative mx-auto max-w-3xl text-center">

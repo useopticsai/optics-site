@@ -12,6 +12,7 @@ export default function CompetitiveEdge() {
 
   return (
     <section
+      id="competitive-edge"
       ref={ref}
       aria-label="Competitive edge"
       className="bg-espresso border-t border-espresso px-6 py-24 md:py-32"

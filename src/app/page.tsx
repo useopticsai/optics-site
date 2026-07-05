@@ -19,7 +19,7 @@ export default function HomePage() {
       {/* 2. Condensed problem teaser — sand band */}
       <ProblemTeaser />
 
-      {/* 3. Terracotta CTA band — one per page, as per palette rules */}
+      {/* 3. CTA band — one per page, as per palette rules */}
       <CtaBand
         headline="Ready to stop guessing how much to bake?"
         subline={HERO.onboarding}

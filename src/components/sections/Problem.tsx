@@ -41,6 +41,7 @@ export default function Problem() {
 
   return (
     <section
+      id="problem"
       ref={ref}
       aria-label="The problem"
       className="bg-transparent border-b border-line px-6 pt-12 pb-20 md:pt-16 md:pb-28"

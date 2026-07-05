@@ -5,12 +5,17 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { NAV_LINKS, PRIMARY_CTA, LOGO, CONTACT } from "@/lib/constants";
+import NavDropdown from "@/components/layout/NavDropdown";
+import NavSubList from "@/components/layout/NavSubList";
+
+// Sticky header z-index to ensure it sits above all page content and animations
+const NAVBAR_Z_INDEX_CLASS = "z-[100]";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-nav/95 backdrop-blur-md border-b border-line">
+    <header className={`sticky top-0 ${NAVBAR_Z_INDEX_CLASS} bg-nav/95 backdrop-blur-md border-b border-line`}>
       <nav
         className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2"
         aria-label="Main navigation"
@@ -31,12 +36,7 @@ export default function Navbar() {
         <ul className="hidden md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
-              <Link
-                href={link.href}
-                className="text-3xl font-extrabold tracking-tight text-forest hover:text-charcoal hover:scale-105 transition-all duration-200 inline-block py-1"
-              >
-                {link.label}
-              </Link>
+              <NavDropdown item={link} />
             </li>
           ))}
         </ul>
@@ -93,7 +93,7 @@ export default function Navbar() {
           >
             <ul className="flex flex-col px-6 py-4 gap-4">
               {NAV_LINKS.map((link) => (
-                <li key={link.href}>
+                <li key={link.href} className="space-y-1.5">
                   <Link
                     href={link.href}
                     onClick={() => setOpen(false)}
@@ -101,6 +101,13 @@ export default function Navbar() {
                   >
                     {link.label}
                   </Link>
+                  {link.children && link.children.length > 0 && (
+                    <NavSubList
+                      items={link.children}
+                      onItemClick={() => setOpen(false)}
+                      variant="mobile"
+                    />
+                  )}
                 </li>
               ))}
               <li className="pt-2">

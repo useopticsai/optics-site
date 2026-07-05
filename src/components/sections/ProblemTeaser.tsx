@@ -49,7 +49,7 @@ export default function ProblemTeaser() {
     <section
       ref={ref}
       aria-label="The problem"
-      className="bg-sand/80 border-t border-line px-6 py-20 md:py-28"
+      className="bg-sand/80 border-t border-line px-6 pt-10 pb-20 md:pt-14 md:pb-28"
     >
       <div className="mx-auto max-w-5xl">
         {/* Section label */}
@@ -106,7 +106,7 @@ export default function ProblemTeaser() {
         >
           <Link
             href="/product"
-            className="text-sm font-semibold text-charcoal hover:underline underline-offset-4 transition"
+            className="text-2xl sm:text-3xl font-extrabold tracking-tight text-charcoal hover:text-forest hover:underline underline-offset-8 transition-all inline-block"
           >
             See how Optics solves this →
           </Link>

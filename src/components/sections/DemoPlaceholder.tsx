@@ -11,6 +11,7 @@ export default function DemoPlaceholder() {
 
   return (
     <section
+      id="demo"
       ref={ref}
       aria-label="Product demo"
       className="bg-transparent border-t border-line px-6 py-24 md:py-32"

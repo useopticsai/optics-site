@@ -31,6 +31,12 @@
   /* #EAB308 — vibrant golden yellow for status indicators */
 }
 
+/* Ensure anchor links scroll cleanly below the ~6rem sticky navbar */
+html {
+  scroll-padding-top: 6.5rem;
+  scroll-behavior: smooth;
+}
+
 /* ---- Global paper texture overlay ----
    Fixed behind all content on every page. Adjust opacity to taste.
    IMPORTANT: for this to be visible, standard sections must use
@@ -48,8 +54,8 @@ body::before {
   /* ← adjust: 0.10 = faint, 0.20 = visible paper, 0.30 = strong */
 }
 
-/* Ensure body children sit above the texture */
-body>* {
+/* Ensure body children sit above the texture, without overriding explicit z-index classes */
+body > *:not([class*="z-"]) {
   position: relative;
   z-index: 1;
 }
