@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-nav/95 backdrop-blur-md border-b border-line">
       <nav
-        className="mx-auto flex max-w-6xl items-center justify-between px-4 py-0"
+        className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2"
         aria-label="Main navigation"
       >
         {/* Logo — left */}
@@ -20,20 +20,20 @@ export default function Navbar() {
           <Image
             src={LOGO.primary}
             alt="Optics logo"
-            width={1024}
-            height={559}
+            width={892}
+            height={348}
             priority
-            className="h-22 w-auto object-contain" /* edit this to change size of logo */
+            className="h-20 w-auto object-contain" /* edit this to change size of logo */
           />
         </Link>
 
         {/* Centred links — desktop */}
-        <ul className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+        <ul className="hidden md:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-2xl font-bold text-forest hover:text-forest transition-colors duration-200"
+                className="text-3xl font-extrabold tracking-tight text-forest hover:text-charcoal hover:scale-105 transition-all duration-200 inline-block py-1"
               >
                 {link.label}
               </Link>
@@ -97,7 +97,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="block text-base font-semibold text-forest-soft hover:text-forest transition-colors"
+                    className="block text-2xl font-extrabold text-forest hover:text-charcoal transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -108,7 +108,7 @@ export default function Navbar() {
                   href={PRIMARY_CTA.href}
                   onClick={() => setOpen(false)}
                   id="nav-mobile-join-waitlist"
-                  className="inline-flex items-center rounded-full bg-charcoal px-5 py-2.5 text-sm font-bold text-cream"
+                  className="inline-flex items-center rounded-full bg-charcoal px-6 py-3 text-lg font-bold text-cream shadow-sm"
                 >
                   {PRIMARY_CTA.label}
                 </Link>

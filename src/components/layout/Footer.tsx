@@ -33,8 +33,8 @@ export default function Footer() {
               <Image
                 src={LOGO.primary}
                 alt="Optics logo"
-                width={150}
-                height={48}
+                width={892}
+                height={348}
                 className="h-12 w-auto object-contain"
               />
             </Link>
