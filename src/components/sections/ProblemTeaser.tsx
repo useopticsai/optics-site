@@ -49,7 +49,7 @@ export default function ProblemTeaser() {
     <section
       ref={ref}
       aria-label="The problem"
-      className="bg-sand border-t border-line px-6 py-20 md:py-28"
+      className="bg-sand/80 border-t border-line px-6 py-20 md:py-28"
     >
       <div className="mx-auto max-w-5xl">
         {/* Section label */}
@@ -82,13 +82,13 @@ export default function ProblemTeaser() {
               className="
                 flex flex-col gap-4 rounded-2xl border border-line
                 bg-cream p-6
-                shadow-[0_2px_12px_rgba(64,42,28,0.05)]
-                hover:shadow-[0_4px_20px_rgba(64,42,28,0.08)]
+                shadow-[0_2px_12px_rgba(42,42,40,0.05)]
+                hover:shadow-[0_4px_20px_rgba(42,42,40,0.08)]
                 transition-shadow duration-300
               "
             >
               {/* Icon */}
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-deep text-terracotta">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-deep text-charcoal">
                 {ICONS[i]}
               </span>
               <h3 className="text-base font-bold text-forest">{item.title}</h3>
@@ -106,7 +106,7 @@ export default function ProblemTeaser() {
         >
           <Link
             href="/product"
-            className="text-sm font-semibold text-terracotta hover:underline underline-offset-4 transition"
+            className="text-sm font-semibold text-charcoal hover:underline underline-offset-4 transition"
           >
             See how Optics solves this →
           </Link>

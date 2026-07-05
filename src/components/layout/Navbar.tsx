@@ -10,9 +10,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-cream/90 backdrop-blur-md border-b border-line">
+    <header className="sticky top-0 z-50 bg-nav/95 backdrop-blur-md border-b border-line">
       <nav
-        className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
+        className="mx-auto flex max-w-6xl items-center justify-between px-4 py-0"
         aria-label="Main navigation"
       >
         {/* Logo — left */}
@@ -20,10 +20,10 @@ export default function Navbar() {
           <Image
             src={LOGO.primary}
             alt="Optics logo"
-            width={110}
-            height={36}
+            width={1024}
+            height={559}
             priority
-            className="h-9 w-auto object-contain"
+            className="h-22 w-auto object-contain" /* edit this to change size of logo */
           />
         </Link>
 
@@ -33,7 +33,7 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-sm font-semibold text-forest-soft hover:text-forest transition-colors duration-200"
+                className="text-2xl font-bold text-forest hover:text-forest transition-colors duration-200"
               >
                 {link.label}
               </Link>
@@ -47,7 +47,7 @@ export default function Navbar() {
           <Link
             href={PRIMARY_CTA.href}
             id="nav-join-waitlist"
-            className="hidden md:inline-flex items-center rounded-full bg-terracotta px-5 py-2 text-sm font-bold text-cream shadow-sm hover:opacity-90 transition-opacity duration-200"
+            className="hidden md:inline-flex items-center rounded-full bg-charcoal px-8 py-3 text-xl font-bold text-cream shadow-sm hover:opacity-90 transition-opacity duration-200"
           >
             {PRIMARY_CTA.label}
           </Link>
@@ -108,7 +108,7 @@ export default function Navbar() {
                   href={PRIMARY_CTA.href}
                   onClick={() => setOpen(false)}
                   id="nav-mobile-join-waitlist"
-                  className="inline-flex items-center rounded-full bg-terracotta px-5 py-2.5 text-sm font-bold text-cream"
+                  className="inline-flex items-center rounded-full bg-charcoal px-5 py-2.5 text-sm font-bold text-cream"
                 >
                   {PRIMARY_CTA.label}
                 </Link>

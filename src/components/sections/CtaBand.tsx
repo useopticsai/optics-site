@@ -26,7 +26,7 @@ export default function CtaBand({
     <section
       ref={ref}
       aria-label={headline}
-      className="bg-terracotta border-t border-terracotta px-6 py-20 md:py-28"
+      className="bg-charcoal border-t border-charcoal px-6 py-20 md:py-28"
     >
       <div className="mx-auto max-w-3xl text-center">
         <motion.h2
@@ -61,8 +61,8 @@ export default function CtaBand({
             className="
               inline-flex items-center rounded-full
               bg-cream px-8 py-3.5
-              text-base font-bold text-terracotta
-              shadow-[0_4px_20px_rgba(0,0,0,0.12)]
+              text-base font-bold text-charcoal
+              shadow-[0_4px_20px_rgba(42,42,40,0.12)]
               hover:bg-deep transition-colors duration-200
             "
           >

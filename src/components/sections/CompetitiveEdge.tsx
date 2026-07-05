@@ -47,7 +47,7 @@ export default function CompetitiveEdge() {
               className="flex items-start gap-4"
             >
               {/* Check mark */}
-              <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-terracotta">
+              <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-charcoal">
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden>
                   <path
                     d="M13 4.5L6.5 11.5L3 8"

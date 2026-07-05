@@ -20,27 +20,18 @@ export default function Hero() {
     <section
       aria-label="Hero"
       className="
-        relative overflow-hidden bg-cream
+        relative overflow-hidden bg-transparent
         border-b border-line
-        px-6 py-28 md:py-36
+        px-6 pt-12 pb-20 md:pt-16 md:pb-28
       "
     >
-      {/* Subtle radial glow — purely decorative */}
-      <div
-        aria-hidden
-        className="
-          pointer-events-none absolute inset-0
-          bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(196,98,62,0.07),transparent)]
-        "
-      />
-
       <div className="relative mx-auto max-w-3xl text-center">
         {/* Status badge */}
         <motion.div
           {...fadeUpProps(0)}
           className="mb-8 inline-flex items-center gap-2 rounded-full border border-line bg-sand px-4 py-1.5"
         >
-          <span className="h-2 w-2 rounded-full bg-terracotta animate-pulse" />
+          <span className="h-2.5 w-2.5 rounded-full bg-gold animate-pulse" />
           <span className="text-xs font-semibold uppercase tracking-widest text-forest-soft">
             {HERO.status}
           </span>
@@ -79,9 +70,9 @@ export default function Hero() {
             href={PRIMARY_CTA.href}
             id="hero-join-waitlist"
             className="
-              inline-flex items-center rounded-full bg-terracotta
+              inline-flex items-center rounded-full bg-charcoal
               px-8 py-3.5 text-base font-bold text-cream
-              shadow-[0_4px_20px_rgba(196,98,62,0.25)]
+              shadow-[0_4px_20px_rgba(42,42,40,0.25)]
               hover:opacity-90 transition-opacity duration-200
             "
           >
@@ -96,7 +87,7 @@ export default function Hero() {
               height="16"
               viewBox="0 0 16 16"
               fill="none"
-              className="flex-shrink-0 text-terracotta"
+              className="flex-shrink-0 text-charcoal"
             >
               <path
                 d="M13.5 4.5L6.5 11.5L3 8"

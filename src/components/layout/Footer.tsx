@@ -33,9 +33,9 @@ export default function Footer() {
               <Image
                 src={LOGO.primary}
                 alt="Optics logo"
-                width={110}
-                height={36}
-                className="h-9 w-auto object-contain"
+                width={150}
+                height={48}
+                className="h-12 w-auto object-contain"
               />
             </Link>
             <p className="text-sm leading-relaxed text-forest-soft max-w-xs">
@@ -93,7 +93,7 @@ export default function Footer() {
           <Link
             href={PRIMARY_CTA.href}
             id="footer-join-waitlist"
-            className="inline-flex items-center rounded-full bg-terracotta px-5 py-2 text-sm font-bold text-cream shadow-sm hover:opacity-90 transition-opacity duration-200"
+            className="inline-flex items-center rounded-full bg-charcoal px-5 py-2 text-sm font-bold text-cream shadow-sm hover:opacity-90 transition-opacity duration-200"
           >
             {PRIMARY_CTA.label}
           </Link>

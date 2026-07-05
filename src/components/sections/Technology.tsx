@@ -14,7 +14,7 @@ export default function Technology() {
     <section
       ref={ref}
       aria-label="Technology"
-      className="bg-cream border-b border-line px-6 py-24 md:py-32"
+      className="bg-transparent border-b border-line px-6 py-24 md:py-32"
     >
       <div className="mx-auto max-w-5xl">
         {/* Section label */}
@@ -22,7 +22,7 @@ export default function Technology() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5, ease: EASE }}
-          className="mb-3 text-xs font-bold uppercase tracking-widest text-terracotta"
+          className="mb-3 text-xs font-bold uppercase tracking-widest text-charcoal"
         >
           Technology
         </motion.p>
@@ -60,8 +60,8 @@ export default function Technology() {
                 aria-hidden
                 className="
                   flex h-10 w-10 flex-shrink-0 items-center justify-center
-                  rounded-full border-2 border-terracotta
-                  text-sm font-extrabold text-terracotta
+                  rounded-full border-2 border-charcoal
+                  text-sm font-extrabold text-charcoal
                 "
               >
                 {i + 1}

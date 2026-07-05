@@ -43,7 +43,7 @@ export default function Problem() {
     <section
       ref={ref}
       aria-label="The problem"
-      className="bg-cream border-b border-line px-6 py-24 md:py-32"
+      className="bg-transparent border-b border-line px-6 pt-12 pb-20 md:pt-16 md:pb-28"
     >
       <div className="mx-auto max-w-5xl">
         {/* Section label */}
@@ -51,7 +51,7 @@ export default function Problem() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5, ease: EASE }}
-          className="mb-3 text-xs font-bold uppercase tracking-widest text-terracotta"
+          className="mb-3 text-xs font-bold uppercase tracking-widest text-charcoal"
         >
           The problem
         </motion.p>
@@ -85,11 +85,11 @@ export default function Problem() {
               className="
                 flex gap-5 rounded-2xl border border-line bg-sand/50
                 p-6 md:p-8
-                shadow-[0_2px_12px_rgba(64,42,28,0.04)]
+                shadow-[0_2px_12px_rgba(42,42,40,0.04)]
               "
             >
               {/* Icon chip */}
-              <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-deep text-terracotta">
+              <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-deep text-charcoal">
                 {ICONS[i]}
               </span>
 

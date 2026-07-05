@@ -106,9 +106,8 @@ export const ABOUT =
 export const CAREERS =
     "We're growing. If you feel strongly about our mission, fill out this form or reach out to us directly — we'd love to connect!";
 
-// ---- Logo (in /public; JPGs — transparent PNG/SVG needed before launch) ----
-// NOTE: actual filenames on disk are logo.jpg and logowithbio.jpg
+// ---- Logo (in /public; transparent PNG now available for primary) ----
 export const LOGO = {
-    primary: "/logo.jpg",
+    primary: "/logoNOBG.png",
     alt: "/logowithbio.jpg",
 };

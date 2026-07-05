@@ -13,7 +13,7 @@ export default function DemoPlaceholder() {
     <section
       ref={ref}
       aria-label="Product demo"
-      className="bg-cream border-t border-line px-6 py-24 md:py-32"
+      className="bg-transparent border-t border-line px-6 py-24 md:py-32"
     >
       <div className="mx-auto max-w-4xl text-center">
         {/* Section label */}
@@ -21,7 +21,7 @@ export default function DemoPlaceholder() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5, ease: EASE }}
-          className="mb-3 text-xs font-bold uppercase tracking-widest text-terracotta"
+          className="mb-3 text-xs font-bold uppercase tracking-widest text-charcoal"
         >
           See it in action
         </motion.p>

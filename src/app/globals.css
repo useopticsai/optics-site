@@ -3,26 +3,53 @@
 @theme {
   --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
 
-  /* Backgrounds — measured from Truffle */
-  --color-cream: rgb(243, 240, 234);
-  /* #F3F0EA page background */
+  /* Backgrounds */
+  --color-cream: rgb(251, 250, 245);
+  /* #FBFAF5 clean light ivory — default page background */
   --color-sand: rgb(234, 229, 218);
   /* #EAE5DA mid-ground sections */
   --color-deep: rgb(221, 214, 197);
   /* #DDD6C5 deepest layer */
+  --color-nav: rgb(237, 230, 218);
+  /* #EDE6DA warm neutral — navbar only, one step darker than page */
 
   /* Borders — the soft grey-brown hairline between sections */
   --color-line: rgb(216, 210, 195);
 
-  /* Text — YOUR green, not Truffle's ink */
+  /* Text — green, matches the logo */
   --color-forest: oklch(38% 0.07 150);
   --color-forest-soft: oklch(48% 0.06 150);
 
-  /* Dark contrast section (Truffle uses near-black espresso here) */
+  /* Dark contrast section */
   --color-espresso: rgb(33, 29, 25);
   /* #211D19 */
 
-  /* Accent — terracotta CTA */
-  --color-terracotta: rgb(196, 98, 62);
-  /* #C4623E */
+  /* Accent — warm charcoal & status gold */
+  --color-charcoal: rgb(42, 42, 40);
+  /* #2A2A28 — slightly warm near-black; ivory text passes WCAG AAA */
+  --color-gold: rgb(234, 179, 8);
+  /* #EAB308 — vibrant golden yellow for status indicators */
+}
+
+/* ---- Global paper texture overlay ----
+   Fixed behind all content on every page. Adjust opacity to taste.
+   IMPORTANT: for this to be visible, standard sections must use
+   bg-transparent (not bg-cream). Only contrast bands (espresso,
+   charcoal) and small UI elements (cards, dropdowns) stay opaque.
+   The ivory bg-cream on <body> provides the base color. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: url("/paper_texture.jpg") center / cover no-repeat fixed;
+  opacity: 0.34;
+  /* ← adjust: 0.10 = faint, 0.20 = visible paper, 0.30 = strong */
+}
+
+/* Ensure body children sit above the texture */
+body>* {
+  position: relative;
+  z-index: 1;
 }
