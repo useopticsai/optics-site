@@ -2,7 +2,9 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
+import { Linkedin } from "@/components/icons/Linkedin";
 import { TEAM_HEADLINE, TEAM } from "@/lib/constants";
+import SocialIconLink from "@/components/SocialIconLink";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -52,14 +54,11 @@ export default function TeamSection() {
                 <p className="pt-2 text-base leading-relaxed text-forest-soft">{member.focus}</p>
               </div>
               <div>
-                <a
+                <SocialIconLink
                   href={member.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-sm font-bold text-charcoal hover:underline underline-offset-4 transition"
-                >
-                  LinkedIn ↗
-                </a>
+                  label={`${member.name} on LinkedIn`}
+                  icon={Linkedin}
+                />
               </div>
             </motion.div>
           ))}

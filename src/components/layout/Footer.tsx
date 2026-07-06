@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Mail } from "lucide-react";
+import { Linkedin } from "@/components/icons/Linkedin";
 import { NAV_LINKS, PRIMARY_CTA, CONTACT, LOGO } from "@/lib/constants";
+import SocialIconLink from "@/components/SocialIconLink";
 
 const FOOTER_COLUMNS = [
   {
@@ -42,24 +45,20 @@ export default function Footer() {
               AI demand forecasting designed to help independent bakeries bake
               the right amount and waste less.
             </p>
-            {/* Contact links */}
-            <div className="flex flex-col gap-1 text-sm">
-              <a
-                href={`mailto:${CONTACT.email}`}
-                className="text-forest-soft hover:text-forest transition-colors"
+            {/* Contact icon buttons */}
+            <div className="flex items-center gap-3 pt-1">
+              <SocialIconLink
                 id="footer-email"
-              >
-                {CONTACT.email}
-              </a>
-              <a
-                href={CONTACT.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-forest-soft hover:text-forest transition-colors"
+                href={`mailto:${CONTACT.email}`}
+                label="Email Optics"
+                icon={Mail}
+              />
+              <SocialIconLink
                 id="footer-linkedin"
-              >
-                LinkedIn ↗
-              </a>
+                href={CONTACT.linkedin}
+                label="Optics on LinkedIn"
+                icon={Linkedin}
+              />
             </div>
           </div>
 
