@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
-import { COMPETITIVE_EDGE } from "@/lib/constants";
+import { COMPETITIVE_EDGE, COMPETITIVE_EDGE_HEADLINE } from "@/lib/constants";
 
 const EASE = "easeOut" as const;
 
@@ -14,16 +14,15 @@ export default function CompetitiveEdge() {
     <section
       id="competitive-edge"
       ref={ref}
-      aria-label="Competitive edge"
-      className="bg-espresso border-t border-espresso px-6 py-24 md:py-32"
+      aria-label="Competitive Edge"
+      className="bg-charcoal px-6 py-20 md:py-28 text-center"
     >
-      <div className="mx-auto max-w-4xl text-center">
-        {/* Section label */}
+      <div className="mx-auto max-w-3xl">
         <motion.p
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5, ease: EASE }}
-          className="mb-3 text-xs font-bold uppercase tracking-widest text-cream/50"
+          className="mb-3 text-xs font-bold uppercase tracking-widest text-cream/70"
         >
           Competitive edge
         </motion.p>
@@ -34,7 +33,7 @@ export default function CompetitiveEdge() {
           transition={{ duration: 0.55, ease: EASE, delay: 0.05 }}
           className="mb-14 text-3xl font-extrabold leading-snug tracking-tight text-cream sm:text-4xl"
         >
-          What legacy POS can't do.
+          {COMPETITIVE_EDGE_HEADLINE}
         </motion.h2>
 
         {/* Edge items */}

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
-import { VALUES } from "@/lib/constants";
+import { VALUES, VALUES_LABEL, VALUES_TITLE } from "@/lib/constants";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -22,10 +22,10 @@ export default function ValuesShowcase() {
         <div className="col-span-6 flex flex-col gap-6">
           <div>
             <p className="mb-2 text-xs font-bold uppercase tracking-widest text-forest-soft">
-              How we operate
+              {VALUES_LABEL}
             </p>
             <h2 className="text-3xl font-extrabold tracking-tight text-forest sm:text-4xl md:text-5xl">
-              Values
+              {VALUES_TITLE}
             </h2>
           </div>
 
@@ -109,10 +109,10 @@ export default function ValuesShowcase() {
       <div className="md:hidden flex flex-col gap-6">
         <div>
           <p className="mb-2 text-xs font-bold uppercase tracking-widest text-forest-soft">
-            How we operate
+            {VALUES_LABEL}
           </p>
           <h2 className="text-3xl font-extrabold tracking-tight text-forest sm:text-4xl">
-            Values
+            {VALUES_TITLE}
           </h2>
         </div>
 

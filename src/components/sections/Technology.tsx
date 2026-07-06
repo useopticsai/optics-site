@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
-import { TECHNOLOGY } from "@/lib/constants";
+import { TECHNOLOGY, TECHNOLOGY_HEADLINE, TECHNOLOGY_SUBLINE } from "@/lib/constants";
 
 const EASE = "easeOut" as const;
 
@@ -15,9 +15,9 @@ export default function Technology() {
       id="technology"
       ref={ref}
       aria-label="Technology"
-      className="bg-transparent border-b border-line px-6 py-24 md:py-32"
+      className="bg-cream border-t border-line px-6 py-20 md:py-28"
     >
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-4xl">
         {/* Section label */}
         <motion.p
           initial={{ opacity: 0 }}
@@ -34,7 +34,7 @@ export default function Technology() {
           transition={{ duration: 0.55, ease: EASE, delay: 0.05 }}
           className="mb-6 text-3xl font-extrabold leading-snug tracking-tight text-forest sm:text-4xl max-w-2xl"
         >
-          Built different — from the math up.
+          {TECHNOLOGY_HEADLINE}
         </motion.h2>
 
         <motion.p
@@ -43,7 +43,7 @@ export default function Technology() {
           transition={{ duration: 0.5, ease: EASE, delay: 0.1 }}
           className="mb-14 text-base leading-7 text-forest-soft max-w-xl"
         >
-          Three layers of intelligence designed to work together, so every forecast gets sharper over time.
+          {TECHNOLOGY_SUBLINE}
         </motion.p>
 
         {/* Numbered items */}

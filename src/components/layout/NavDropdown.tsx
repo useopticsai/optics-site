@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
@@ -16,6 +16,10 @@ const PANEL_OFFSET_CLASS = "pt-2";
 // Z-index class ensuring the open dropdown panel renders cleanly above all surrounding elements
 const PANEL_Z_INDEX_CLASS = "z-[9999]";
 
+const emptySubscribe = () => () => {};
+const getClientSnapshot = () => true;
+const getServerSnapshot = () => false;
+
 interface NavDropdownProps {
   item: NavItem;
 }
@@ -24,11 +28,7 @@ export default function NavDropdown({ item }: NavDropdownProps) {
   const { isOpen, setIsOpen, onMouseEnter, onMouseLeave } = useHoverIntent(CLOSE_DELAY_MS);
   const containerRef = useRef<HTMLDivElement>(null);
   const coords = usePortalCoords(containerRef, isOpen);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useSyncExternalStore(emptySubscribe, getClientSnapshot, getServerSnapshot);
 
   // Close when clicking outside the dropdown container or portal panel
   useEffect(() => {

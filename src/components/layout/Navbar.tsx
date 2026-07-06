@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { NAV_LINKS, PRIMARY_CTA, LOGO, CONTACT } from "@/lib/constants";
+import { NAV_LINKS, PRIMARY_CTA, LOGO } from "@/lib/constants";
 import NavDropdown from "@/components/layout/NavDropdown";
 import NavSubList from "@/components/layout/NavSubList";
 
@@ -24,7 +24,7 @@ export default function Navbar() {
         <Link href="/" className="flex-shrink-0" aria-label="Optics home">
           <Image
             src={LOGO.primary}
-            alt="Optics logo"
+            alt={LOGO.altText}
             width={892}
             height={348}
             priority

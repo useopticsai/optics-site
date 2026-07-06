@@ -84,8 +84,12 @@ export const PROBLEM = [
 ];
 
 // Short problem teaser headline for the Home page problem section.
+export const PROBLEM_TEASER_HEADLINE =
+    "Independent bakeries lose thousands every year — silently.";
 export const PROBLEM_HEADLINE =
-    "Independent bakeries lose thousands every year, quietly.";
+    "Bakeries weren't built to waste — but the tools haven't caught up.";
+export const PROBLEM_SUBLINE =
+    "Independent bakeries face systemic inefficiencies that quietly erode margins every day.";
 
 // ---- Technology ----
 export const TECHNOLOGY = [
@@ -104,15 +108,25 @@ export const TECHNOLOGY = [
 ];
 
 // Section headline for the Technology section.
-export const TECHNOLOGY_HEADLINE = "Forecasting built for how bakeries actually run.";
+export const TECHNOLOGY_HEADLINE = "Built different — from the math up.";
+export const TECHNOLOGY_SUBLINE =
+    "Three layers of intelligence designed to work together, so every forecast gets sharper over time.";
 
 // ---- Competitive edge (vs. legacy POS like Toast/Oracle) ----
-export const COMPETITIVE_EDGE_HEADLINE = "What legacy POS systems cannot do.";
+export const COMPETITIVE_EDGE_HEADLINE = "What legacy POS can't do.";
 export const COMPETITIVE_EDGE = [
     "Waste-elimination AI, a Bayesian forecasting engine, an agentic co-pilot, and a cross-bakery learning network in one product.",
     "Real-time weather and event data feeding every prediction.",
     "A 30-minute setup with zero setup fees.",
 ];
+
+// ---- MVP Demo ----
+export const DEMO = {
+    label: "See it in action",
+    title: "MVP Demo",
+    body: "A walkthrough of the Optics forecasting dashboard is coming soon.",
+    placeholder: "Demo video coming soon",
+};
 
 // ---- Mission page content ----
 // Lead statement for the Mission page.
@@ -148,6 +162,9 @@ export const VALUES = [
         image: "/values_pictures/waste_enemy.jpg",
     },
 ];
+
+export const VALUES_LABEL = "How we operate";
+export const VALUES_TITLE = "Values";
 
 // ---- Team ----
 export const TEAM_HEADLINE = "The team behind Optics.";
@@ -356,15 +373,50 @@ export const PILOT_FORM_MESSAGES = {
     emailError: "Please enter a valid email address.",
 };
 
-// ---- Privacy ----
+// ---- Privacy policy ----
+// NOTE: This is a plain-language privacy policy describing what the site
+// actually does today (collects form submissions via Web3Forms, hosted on
+// Vercel, no analytics/tracking cookies at time of writing).
+// TODO before launch: (1) have a lawyer review, (2) set the real effective
+// date, (3) add your legal entity name and contact/mailing details,
+// (4) update if you add analytics, cookies, or new data processors.
 export const PRIVACY = {
     headline: "Privacy, kept simple.",
-    body: [
-        "When you join our pilot, we collect your email address and any details you choose to share in the form.",
-        "We use that information only to contact you about Optics and our early-access program. We do not sell it or share it with advertisers.",
-        "If you want your information removed, email us and we will delete it.",
+    lastUpdated: "TODO: set effective date before launch",
+    intro:
+        "This policy explains what information Optics collects, why, and what we do with it. We keep this short and honest because that is how we want to run the company.",
+    sections: [
+        {
+            title: "What we collect",
+            body: "We only collect information you give us directly. When you submit a form on this site (the pilot application or the careers form), we collect the details you enter, such as your name, email address, bakery name, location, and anything you write in the message fields. We do not collect more than that.",
+        },
+        {
+            title: "How your information is handled",
+            body: "Our forms are processed by Web3Forms, a third-party form service that delivers your submission to our email inbox. Your submission passes through their systems to reach us. This website is hosted on Vercel. We do not currently run advertising trackers or sell your information to anyone.",
+        },
+        {
+            title: "Why we use it",
+            body: "We use the information you submit only to respond to you and to contact you about Optics, the pilot program, or a role you applied for. We do not use it for unrelated marketing, and we do not share it with advertisers.",
+        },
+        {
+            title: "How long we keep it",
+            body: "We keep your submission for as long as we need it to stay in touch with you about Optics. If you ask us to delete it, we will.",
+        },
+        {
+            title: "Your choices",
+            body: "You can ask us at any time to tell you what information we hold about you, to correct it, or to delete it. Email us and we will take care of it.",
+        },
+        {
+            title: "Changes to this policy",
+            body: "If we change how we handle your information, for example if we add analytics or new services, we will update this page. Check back here for the current version.",
+        },
+        {
+            title: "Contact",
+            body: "Questions about privacy? Email us and we will respond.",
+        },
     ],
-    // TODO: review before public launch. Expand if you add analytics or cookies.
+    // The contact section should render CONTACT.email from constants, not a
+    // hardcoded address.
 };
 
 // ---- Closing CTA (reused across pages via CtaBand) ----
@@ -376,5 +428,6 @@ export const CLOSING_CTA = {
 // ---- Logo (in /public) ----
 export const LOGO = {
     primary: "/logoNOBG.png",
-    alt: "/logowithbio.jpg",
+    secondary: "/logowithbio.jpg",
+    altText: "Optics",
 };

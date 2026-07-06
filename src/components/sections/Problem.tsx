@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
-import { PROBLEM } from "@/lib/constants";
+import { PROBLEM, PROBLEM_HEADLINE, PROBLEM_SUBLINE } from "@/lib/constants";
 
 const EASE = "easeOut" as const;
 
@@ -15,38 +15,35 @@ const ICONS = [
       stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"
     />
   </svg>,
-  /* High barriers — shield lock */
-  <svg key="barrier" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
-    <path
-      d="M12 2l7 4v5c0 5.25-3.5 9.74-7 11-3.5-1.26-7-5.75-7-11V6l7-4z"
-      stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"
-    />
-    <rect x="10" y="10" width="4" height="5" rx="1" stroke="currentColor" strokeWidth="1.4" />
-    <path d="M10 10v-1a2 2 0 1 1 4 0v1" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+  /* Enterprise tools — blocks */
+  <svg key="blocks" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+    <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="1.6" />
+    <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="1.6" />
+    <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="1.6" />
+    <path d="M3 17.5h7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
   </svg>,
-  /* Unscientific ordering — dice */
-  <svg key="dice" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
-    <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" strokeWidth="1.6" />
-    <circle cx="8.5" cy="8.5" r="1.2" fill="currentColor" />
-    <circle cx="15.5" cy="8.5" r="1.2" fill="currentColor" />
-    <circle cx="12" cy="12" r="1.2" fill="currentColor" />
-    <circle cx="8.5" cy="15.5" r="1.2" fill="currentColor" />
-    <circle cx="15.5" cy="15.5" r="1.2" fill="currentColor" />
+  /* Gut feel — question mark */
+  <svg key="question" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.6" />
+    <path
+      d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"
+      stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"
+    />
   </svg>,
 ];
 
 export default function Problem() {
   const ref = useRef<HTMLElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const inView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
     <section
       id="problem"
       ref={ref}
       aria-label="The problem"
-      className="bg-transparent border-b border-line px-6 pt-12 pb-20 md:pt-16 md:pb-28"
+      className="bg-sand px-6 py-20 md:py-28"
     >
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-4xl">
         {/* Section label */}
         <motion.p
           initial={{ opacity: 0 }}
@@ -63,7 +60,7 @@ export default function Problem() {
           transition={{ duration: 0.55, ease: EASE, delay: 0.05 }}
           className="mb-6 text-3xl font-extrabold leading-snug tracking-tight text-forest sm:text-4xl max-w-2xl"
         >
-          Bakeries weren't built to waste — but the tools haven't caught up.
+          {PROBLEM_HEADLINE}
         </motion.h2>
 
         <motion.p
@@ -72,7 +69,7 @@ export default function Problem() {
           transition={{ duration: 0.5, ease: EASE, delay: 0.1 }}
           className="mb-14 text-base leading-7 text-forest-soft max-w-xl"
         >
-          Independent bakeries face systemic inefficiencies that quietly erode margins every day.
+          {PROBLEM_SUBLINE}
         </motion.p>
 
         {/* Vertical card list */}

@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
+import { DEMO } from "@/lib/constants";
 
 const EASE = "easeOut" as const;
 
@@ -24,7 +25,7 @@ export default function DemoPlaceholder() {
           transition={{ duration: 0.5, ease: EASE }}
           className="mb-3 text-xs font-bold uppercase tracking-widest text-charcoal"
         >
-          See it in action
+          {DEMO.label}
         </motion.p>
 
         <motion.h2
@@ -33,7 +34,7 @@ export default function DemoPlaceholder() {
           transition={{ duration: 0.55, ease: EASE, delay: 0.05 }}
           className="mb-6 text-2xl font-bold leading-snug text-forest sm:text-3xl"
         >
-          MVP Demo
+          {DEMO.title}
         </motion.h2>
 
         <motion.p
@@ -42,7 +43,7 @@ export default function DemoPlaceholder() {
           transition={{ duration: 0.5, ease: EASE, delay: 0.1 }}
           className="mb-10 text-sm leading-6 text-forest-soft max-w-md mx-auto"
         >
-          A walkthrough of the Optics forecasting dashboard is coming soon.
+          {DEMO.body}
         </motion.p>
 
         {/* Placeholder slot for GIF / video */}
@@ -63,7 +64,7 @@ export default function DemoPlaceholder() {
             </svg>
           </span>
           <span className="text-xs font-semibold uppercase tracking-widest text-forest-soft">
-            Demo video coming soon
+            {DEMO.placeholder}
           </span>
         </motion.div>
       </div>

@@ -35,7 +35,7 @@ export default function Footer() {
             <Link href="/" aria-label="Optics home" className="inline-block">
               <Image
                 src={LOGO.primary}
-                alt="Optics logo"
+                alt={LOGO.altText}
                 width={892}
                 height={348}
                 className="h-12 w-auto object-contain"

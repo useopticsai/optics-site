@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
-import { PROBLEM } from "@/lib/constants";
+import { PROBLEM, PROBLEM_TEASER_HEADLINE } from "@/lib/constants";
 
 const EASE = "easeOut" as const;
 
@@ -13,30 +13,26 @@ const ICONS = [
     <path
       d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H7"
       stroke="currentColor"
-      strokeWidth="1.8"
+      strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
   </svg>,
-  /* Barrier / High cost */
-  <svg key="barrier" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
-    <rect x="3" y="11" width="18" height="2" rx="1" stroke="currentColor" strokeWidth="1.8" />
-    <path
-      d="M12 3v5M12 16v5"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-    />
-    <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.8" />
+  /* Enterprise integration / Blocks */
+  <svg key="blocks" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
+    <rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="2" />
+    <rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="2" />
+    <rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="2" />
+    <path d="M3 17.5h7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
   </svg>,
-  /* Intuition / Unscientific */
-  <svg key="intuition" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
+  /* Gut feel / Question circle */
+  <svg key="question" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
+    <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
     <path
-      d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"
+      d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"
       stroke="currentColor"
-      strokeWidth="1.8"
+      strokeWidth="2"
       strokeLinecap="round"
-      strokeLinejoin="round"
     />
   </svg>,
 ];
@@ -68,7 +64,7 @@ export default function ProblemTeaser() {
           transition={{ duration: 0.55, ease: EASE, delay: 0.05 }}
           className="mb-12 text-2xl font-bold leading-snug text-forest sm:text-3xl max-w-xl"
         >
-          Independent bakeries lose thousands every year — silently.
+          {PROBLEM_TEASER_HEADLINE}
         </motion.h2>
 
         {/* Cards */}
