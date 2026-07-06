@@ -62,7 +62,7 @@ export default function CtaBand({
               inline-flex items-center rounded-full
               bg-cream px-8 py-3.5
               text-base font-bold text-charcoal
-              shadow-[0_4px_20px_rgba(42,42,40,0.12)]
+              shadow-warm-cta
               hover:bg-deep transition-colors duration-200
             "
           >

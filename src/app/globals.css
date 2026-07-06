@@ -29,6 +29,17 @@
   /* #2A2A28 — slightly warm near-black; ivory text passes WCAG AAA */
   --color-gold: rgb(234, 179, 8);
   /* #EAB308 — vibrant golden yellow for status indicators */
+
+  /* Warm shadows — single source for the rgba(42,42,40,…) shadow color */
+  --shadow-warm-xs: 0 2px 8px rgba(42, 42, 40, 0.04);
+  --shadow-warm-sm: 0 2px 12px rgba(42, 42, 40, 0.04);
+  --shadow-warm-md: 0 4px 20px rgba(42, 42, 40, 0.05);
+  --shadow-warm-lg: 0 8px 30px rgba(42, 42, 40, 0.06);
+  --shadow-warm-xl: 0 12px 36px rgba(42, 42, 40, 0.06);
+  --shadow-warm-nav: 0 10px 30px rgba(42, 42, 40, 0.08);
+  --shadow-warm-hover: 0 8px 30px rgba(42, 42, 40, 0.08);
+  --shadow-warm-cta: 0 4px 20px rgba(42, 42, 40, 0.12);
+  --shadow-warm-hero: 0 4px 20px rgba(42, 42, 40, 0.25);
 }
 
 /* Ensure anchor links scroll cleanly below the ~6rem sticky navbar */
@@ -58,4 +69,33 @@ body::before {
 body > *:not([class*="z-"]) {
   position: relative;
   z-index: 1;
+}
+
+/* Shadow utility classes — map to the warm shadow tokens above */
+@utility shadow-warm-xs {
+  box-shadow: var(--shadow-warm-xs);
+}
+@utility shadow-warm-sm {
+  box-shadow: var(--shadow-warm-sm);
+}
+@utility shadow-warm-md {
+  box-shadow: var(--shadow-warm-md);
+}
+@utility shadow-warm-lg {
+  box-shadow: var(--shadow-warm-lg);
+}
+@utility shadow-warm-xl {
+  box-shadow: var(--shadow-warm-xl);
+}
+@utility shadow-warm-nav {
+  box-shadow: var(--shadow-warm-nav);
+}
+@utility shadow-warm-hover {
+  box-shadow: var(--shadow-warm-hover);
+}
+@utility shadow-warm-cta {
+  box-shadow: var(--shadow-warm-cta);
+}
+@utility shadow-warm-hero {
+  box-shadow: var(--shadow-warm-hero);
 }

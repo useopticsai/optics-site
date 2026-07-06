@@ -83,7 +83,7 @@ export default function Problem() {
               className="
                 flex gap-5 rounded-2xl border border-line bg-sand/50
                 p-6 md:p-8
-                shadow-[0_2px_12px_rgba(42,42,40,0.04)]
+                shadow-warm-sm
               "
             >
               {/* Icon chip */}

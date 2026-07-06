@@ -78,8 +78,8 @@ export default function ProblemTeaser() {
               className="
                 flex flex-col gap-4 rounded-2xl border border-line
                 bg-cream p-6
-                shadow-[0_2px_12px_rgba(42,42,40,0.05)]
-                hover:shadow-[0_4px_20px_rgba(42,42,40,0.08)]
+                shadow-warm-sm
+                hover:shadow-warm-hover
                 transition-shadow duration-300
               "
             >

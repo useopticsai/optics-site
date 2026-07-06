@@ -46,11 +46,11 @@ export default function TeamSection() {
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, ease: EASE, delay: 0.2 + index * 0.15 }}
-              className="flex flex-col items-center text-center justify-between gap-6 rounded-2xl border border-line bg-cream p-8 shadow-[0_4px_20px_rgba(42,42,40,0.04)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(42,42,40,0.08)]"
+              className="flex flex-col items-center text-center justify-between gap-6 rounded-2xl border border-line bg-cream p-8 shadow-warm-md transition-all duration-200 hover:-translate-y-1 hover:shadow-warm-hover"
             >
               <div className="flex flex-col items-center space-y-4 w-full">
                 {member.headshot ? (
-                  <div className="relative h-28 w-28 overflow-hidden rounded-full border-2 border-line/80 bg-sand/40 shadow-[0_4px_16px_rgba(42,42,40,0.06)] transition-transform duration-300 hover:scale-105">
+                  <div className="relative h-28 w-28 overflow-hidden rounded-full border-2 border-line/80 bg-sand/40 shadow-warm-md transition-transform duration-300 hover:scale-105">
                     <Image
                       src={member.headshot}
                       alt={member.name}
@@ -60,7 +60,7 @@ export default function TeamSection() {
                     />
                   </div>
                 ) : (
-                  <div className="flex h-28 w-28 items-center justify-center rounded-full border-2 border-line/80 bg-sand/60 text-2xl font-extrabold text-forest shadow-[0_4px_16px_rgba(42,42,40,0.06)]">
+                  <div className="flex h-28 w-28 items-center justify-center rounded-full border-2 border-line/80 bg-sand/60 text-2xl font-extrabold text-forest shadow-warm-md">
                     {member.name
                       .split(" ")
                       .map((n) => n[0])

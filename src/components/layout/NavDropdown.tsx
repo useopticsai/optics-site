@@ -138,7 +138,7 @@ export default function NavDropdown({ item }: NavDropdownProps) {
               onMouseLeave={onMouseLeave}
               className={`-translate-x-1/2 ${PANEL_OFFSET_CLASS} w-60 ${PANEL_Z_INDEX_CLASS}`}
             >
-              <div className="rounded-2xl border border-line bg-cream p-2 shadow-[0_10px_30px_rgba(42,42,40,0.08)] backdrop-blur-md">
+              <div className="rounded-2xl border border-line bg-cream p-2 shadow-warm-nav backdrop-blur-md">
                 <NavSubList
                   items={item.children}
                   onItemClick={() => setIsOpen(false)}

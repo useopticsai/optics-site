@@ -44,7 +44,7 @@ export default function ValuesShowcase() {
                   onFocus={() => setActiveIndex(index)}
                   className={`group text-left px-5 py-3.5 rounded-xl transition-all duration-200 flex items-center justify-between border focus:outline-none focus:ring-2 focus:ring-forest/30 ${
                     isActive
-                      ? "bg-cream border-line/80 shadow-[0_4px_20px_rgba(42,42,40,0.05)] translate-x-1.5"
+                      ? "bg-cream border-line/80 shadow-warm-md translate-x-1.5"
                       : "border-transparent hover:bg-sand/60 hover:translate-x-1"
                   }`}
                 >
@@ -79,7 +79,7 @@ export default function ValuesShowcase() {
               className="w-full flex flex-col gap-4"
             >
               {activeValue.image ? (
-                <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl bg-sand/40 border border-line/60 shadow-[0_8px_24px_rgba(42,42,40,0.06)]">
+                <div className="relative w-full aspect-[4/3] overflow-hidden rounded-2xl bg-sand/40 border border-line/60 shadow-warm-lg">
                   <Image
                     src={activeValue.image}
                     alt={`${activeValue.title} — Optics value`}
@@ -90,12 +90,12 @@ export default function ValuesShowcase() {
                   />
                 </div>
               ) : (
-                <div className="flex w-full aspect-[4/3] items-center justify-center rounded-2xl bg-sand/60 text-forest/40 shadow-[0_8px_24px_rgba(42,42,40,0.06)] font-bold text-lg border border-line/60">
+                <div className="flex w-full aspect-[4/3] items-center justify-center rounded-2xl bg-sand/60 text-forest/40 shadow-warm-lg font-bold text-lg border border-line/60">
                   {activeValue.title}
                 </div>
               )}
 
-              <div className="rounded-xl border border-line/60 bg-cream/80 p-5 md:p-6 shadow-[0_2px_12px_rgba(42,42,40,0.03)] backdrop-blur-sm">
+              <div className="rounded-xl border border-line/60 bg-cream/80 p-5 md:p-6 shadow-warm-sm backdrop-blur-sm">
                 <p className="text-base md:text-lg leading-relaxed text-forest font-medium">
                   {activeValue.body}
                 </p>
@@ -123,7 +123,7 @@ export default function ValuesShowcase() {
               <div
                 key={item.title}
                 className={`flex flex-col rounded-xl border transition-all duration-200 overflow-hidden ${
-                  isActive ? "bg-cream border-line/80 shadow-[0_4px_16px_rgba(42,42,40,0.05)]" : "bg-sand/40 border-line/40"
+                  isActive ? "bg-cream border-line/80 shadow-warm-md" : "bg-sand/40 border-line/40"
                 }`}
               >
                 <button

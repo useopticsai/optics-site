@@ -72,7 +72,7 @@ export default function Hero() {
             className="
               inline-flex items-center rounded-full bg-charcoal
               px-8 py-3.5 text-base font-bold text-cream
-              shadow-[0_4px_20px_rgba(42,42,40,0.25)]
+              shadow-warm-hero
               hover:opacity-90 transition-opacity duration-200
             "
           >

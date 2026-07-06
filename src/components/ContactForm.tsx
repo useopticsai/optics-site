@@ -30,7 +30,7 @@ export default function ContactForm({
   // Graceful degradation when key is missing
   if (!apiKey || apiKey.trim() === "" || apiKey === "YOUR_KEY_HERE") {
     return (
-      <div className={`rounded-2xl border border-line bg-cream/80 p-8 shadow-[0_4px_20px_rgba(42,42,40,0.04)] ${className}`}>
+      <div className={`rounded-2xl border border-line bg-cream/80 p-8 shadow-warm-md ${className}`}>
         <h3 className="mb-2 text-lg font-bold text-forest">{msg.unavailableTitle}</h3>
         <p className="text-base leading-relaxed text-forest-soft">{msg.unavailableBody}</p>
       </div>
@@ -115,7 +115,7 @@ export default function ContactForm({
 
   if (status === "success") {
     return (
-      <div className={`rounded-2xl border border-line bg-cream p-8 shadow-[0_8px_30px_rgba(42,42,40,0.06)] ${className}`} role="status">
+      <div className={`rounded-2xl border border-line bg-cream p-8 shadow-warm-lg ${className}`} role="status">
         <h3 className="mb-2 text-xl font-bold text-forest">{msg.successTitle}</h3>
         <p className="text-base leading-relaxed text-forest-soft">{msg.successBody}</p>
         <button
@@ -130,7 +130,7 @@ export default function ContactForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className={`space-y-6 rounded-2xl border border-line bg-cream/90 p-6 sm:p-8 shadow-[0_8px_30px_rgba(42,42,40,0.05)] ${className}`}>
+    <form onSubmit={handleSubmit} noValidate className={`space-y-6 rounded-2xl border border-line bg-cream/90 p-6 sm:p-8 shadow-warm-lg ${className}`}>
       {/* Botcheck honeypot field */}
       <input
         type="checkbox"
