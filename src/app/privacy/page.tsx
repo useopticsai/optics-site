@@ -1,8 +1,16 @@
+import type { Metadata } from "next";
+import PrivacySection from "@/components/sections/PrivacySection";
+
+export const metadata: Metadata = {
+  title: "Privacy — Optics",
+  description:
+    "How we collect, use, and protect your data during the Optics early-access pilot program.",
+};
+
 export default function PrivacyPage() {
   return (
-    <main className="mx-auto max-w-4xl px-6 py-24">
-      <h1 className="text-4xl font-bold">Privacy</h1>
-      <p className="mt-4 text-neutral-400">Placeholder — content coming.</p>
+    <main id="privacy-content">
+      <PrivacySection />
     </main>
   );
 }

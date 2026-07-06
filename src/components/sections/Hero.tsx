@@ -68,7 +68,7 @@ export default function Hero() {
         >
           <Link
             href={PRIMARY_CTA.href}
-            id="hero-join-waitlist"
+            id="hero-join-pilot"
             className="
               inline-flex items-center rounded-full bg-charcoal
               px-8 py-3.5 text-base font-bold text-cream

@@ -46,7 +46,7 @@ export default function Navbar() {
           {/* Primary CTA — desktop */}
           <Link
             href={PRIMARY_CTA.href}
-            id="nav-join-waitlist"
+            id="nav-join-pilot"
             className="hidden md:inline-flex items-center rounded-full bg-charcoal px-8 py-3 text-xl font-bold text-cream shadow-sm hover:opacity-90 transition-opacity duration-200"
           >
             {PRIMARY_CTA.label}
@@ -114,7 +114,7 @@ export default function Navbar() {
                 <Link
                   href={PRIMARY_CTA.href}
                   onClick={() => setOpen(false)}
-                  id="nav-mobile-join-waitlist"
+                  id="nav-mobile-join-pilot"
                   className="inline-flex items-center rounded-full bg-charcoal px-6 py-3 text-lg font-bold text-cream shadow-sm"
                 >
                   {PRIMARY_CTA.label}

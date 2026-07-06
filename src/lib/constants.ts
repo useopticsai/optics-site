@@ -21,7 +21,7 @@ export const CONTACT = {
     linkedin: "https://www.linkedin.com/in/useoptics/",
 };
 
-// ---- Navigation (top nav links; Join Waitlist is the single CTA, kept separate) ----
+// ---- Navigation (top nav links; Join Pilot is the single CTA, kept separate) ----
 // Team has been merged into the Mission page, so it is no longer a nav item.
 export interface NavItem {
     label: string;
@@ -52,7 +52,7 @@ export const NAV_LINKS: NavItem[] = [
     { label: "Careers", href: "/careers" },
 ];
 
-export const PRIMARY_CTA = { label: "Join Waitlist", href: "/waitlist" };
+export const PRIMARY_CTA = { label: "Join the Pilot", href: "/pilot" };
 
 // ---- Home: value proposition ----
 export const HERO = {
@@ -262,21 +262,105 @@ export const CAREERS = {
 };
 
 
-// ---- Waitlist ----
-export const WAITLIST = {
-    headline: "Get early access.",
-    body: "Join the waitlist and we will reach out as we onboard early bakeries.",
+// ---- Pilot program ----
+export const PILOT = {
+    headline: "The pilot is open. Version 1 is almost here.",
+    status:
+        "We are finalizing version 1 of Optics and enrolling a small group of pilot bakeries right now. Pilot bakeries get in first, shape the product with us, and are the first to run their mornings on it.",
+    involvesHeadline: "What the pilot involves.",
+    involves: [
+        {
+            title: "Forecasts built for your bakery",
+            body: "Optics is built to tell you how much to bake before the ovens turn on. It learns from network-wide patterns and live signals like weather, local events, and holidays, and it adjusts as conditions change.",
+        },
+        {
+            title: "A prep sheet, not a spreadsheet",
+            body: "Each day, Optics is designed to turn its forecast into a simple next-day prep sheet. No dashboards to decode at 5 a.m. Just what to make and how much.",
+        },
+        {
+            title: "Running in 30 minutes",
+            body: "Setup takes about half an hour. No new hardware, no integration project, no IT department required.",
+        },
+        {
+            title: "Your feedback shapes version 1",
+            body: "This is a pilot. You tell us what works on a real shop floor and what does not, and we build accordingly. Early bakeries have a direct line to the founders.",
+        },
+    ],
+    whoHeadline: "Who it's for.",
+    who: "Independent bakeries that are tired of throwing away good product, and want a say in the tool built to fix it.",
+    formHeadline: "Apply for the pilot.",
+    formIntro:
+        "Tell us a bit about your bakery. We are enrolling in small batches and will reach out directly.",
+    successMessage: "Thanks. We will be in touch about the pilot soon.",
     privacyNote:
-        "We only use your email to contact you about Optics. We never sell it.",
-    // TODO: paste the Tally form embed URL here once created.
-    tallyEmbedUrl: "",
+        "We only use your details to contact you about the Optics pilot. We never sell them.",
+};
+
+export const PILOT_FORM_CONFIG: FormFieldConfig[] = [
+    {
+        name: "bakeryName",
+        label: "Bakery name",
+        type: "text",
+        required: true,
+        placeholder: "Your bakery's name",
+    },
+    {
+        name: "name",
+        label: "Contact name",
+        type: "text",
+        required: true,
+        placeholder: "Your full name",
+    },
+    {
+        name: "email",
+        label: "Email",
+        type: "email",
+        required: true,
+        placeholder: "you@example.com",
+    },
+    {
+        name: "location",
+        label: "City / location",
+        type: "text",
+        required: true,
+        placeholder: "e.g., Seattle, WA",
+    },
+    {
+        name: "productionSize",
+        label: "Approximate daily production or bakery size",
+        type: "text",
+        required: false,
+        placeholder: "e.g., 500 loaves/day or 2 retail locations",
+    },
+    {
+        name: "message",
+        label: "Anything you want us to know?",
+        type: "textarea",
+        required: false,
+        rows: 4,
+        placeholder: "Tell us about your current morning workflow, biggest waste drivers, or any questions.",
+    },
+];
+
+export const PILOT_FORM_MESSAGES = {
+    subject: "New Pilot Application",
+    submitButton: "Apply for Pilot",
+    submittingButton: "Sending...",
+    successTitle: PILOT.successMessage,
+    successBody: "We received your application and will review it carefully.",
+    errorTitle: "Something went wrong.",
+    errorFallback: "We couldn't submit your application right now. Please try again or email us directly.",
+    unavailableTitle: "Form temporarily unavailable",
+    unavailableBody: "Our submission system is currently offline. Please apply by emailing us directly.",
+    requiredError: "This field is required.",
+    emailError: "Please enter a valid email address.",
 };
 
 // ---- Privacy ----
 export const PRIVACY = {
     headline: "Privacy, kept simple.",
     body: [
-        "When you join our waitlist, we collect your email address and any details you choose to share in the form.",
+        "When you join our pilot, we collect your email address and any details you choose to share in the form.",
         "We use that information only to contact you about Optics and our early-access program. We do not sell it or share it with advertisers.",
         "If you want your information removed, email us and we will delete it.",
     ],

@@ -10,7 +10,7 @@ Standing instructions for any agent working in this repo. Read before every task
 
 ## 1. What this is
 
-A **marketing site only** for **Optics** — an AI demand-forecasting product that helps independent bakeries cut overproduction waste. No auth, no product app, no accounts, no dashboard. Purpose: explain the problem, pitch the product, introduce the company/team, collect a waitlist, surface careers.
+A **marketing site only** for **Optics** — an AI demand-forecasting product that helps independent bakeries cut overproduction waste. No auth, no product app, no accounts, no dashboard. Purpose: explain the problem, pitch the product, introduce the company/team, enroll a pilot, surface careers.
 
 Audience: independent bakery owners (primary); investors and hires (secondary).
 Tone: warm, clear, confident — not hype-y. Short declarative sentences. Generous whitespace. Calm and premium, not busy.
@@ -44,25 +44,27 @@ In `src/app/globals.css` under `@theme`. Use via Tailwind v4 auto-generated util
 @theme {
   --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
 
-  --color-cream:  rgb(243, 240, 234);   /* default page background */
+  --color-cream:  rgb(251, 250, 245);   /* default page background */
   --color-sand:   rgb(234, 229, 218);   /* alternate section background */
   --color-deep:   rgb(221, 214, 197);   /* deepest neutral layer */
+  --color-nav:    rgb(237, 230, 218);   /* warm neutral — navbar only */
   --color-line:   rgb(216, 210, 195);   /* 1px section divider */
 
   --color-forest:      oklch(38% 0.07 150);  /* headings + body text */
   --color-forest-soft: oklch(48% 0.06 150);  /* secondary text */
 
   --color-espresso:    rgb(33, 29, 25);      /* dark contrast band */
-  --color-terracotta:  rgb(196, 98, 62);     /* primary CTA / accent */
+  --color-charcoal:    rgb(42, 42, 40);      /* primary CTA / buttons / accent */
+  --color-gold:        rgb(234, 179, 8);     /* status indicators / pulse animations */
 }
 ```
 
 Rules:
 - Default bg `cream`, text `forest`, secondary text `forest-soft`.
-- **Green is the ONLY text color.** Never use terracotta/brown for body text (fails readability). Terracotta = CTAs/buttons and one accent band only.
+- **Green is the ONLY text color.** Never use brown or terracotta for body text (fails readability). Charcoal = CTAs/buttons, interactive badges, and accent contrast bands. Gold = status indicators and pulse animations.
 - Separate sections with a 1px `line` top border — hairlines, not heavy boxes.
-- Per long page, break the calm with exactly TWO full-bleed contrast bands: one `espresso` (dark, cream text) and one `terracotta` CTA band. No more.
-- Warm-tinted shadows (`rgba(64,42,28,0.05)`), never grey/black.
+- Per long page, break the calm with up to TWO full-bleed contrast bands: e.g. one `espresso` (dark, cream text) and one `charcoal` CTA band. No more.
+- Warm-tinted shadows (`rgba(42,42,40,0.05)` or `rgba(64,42,28,0.05)`), never grey/black.
 - `scroll-padding-top: 5rem` for anchor offset. Respect `prefers-reduced-motion`.
 
 ---
@@ -79,17 +81,16 @@ Multi-page. Nav links navigate between routes (they do NOT scroll within one pag
 
 | Route | Contents |
 |---|---|
-| `/` | Hero (value prop + waitlist CTA), condensed problem teaser, terracotta CTA band |
-| `/product` | Problem, technology, competitive edge, MVP demo slot (placeholder now) |
-| `/about` | What Optics is and why it exists |
-| `/team` | Founder cards with LinkedIns; company LinkedIn + email |
-| `/waitlist` | Tally embed + short privacy note |
-| `/careers` | "We're growing, reach out" |
+| `/` | Hero (value prop + pilot CTA), condensed problem teaser, charcoal CTA band |
+| `/product` | Problem, technology, competitive edge, MVP demo slot |
+| `/mission` | What Optics is, values, and team founder cards with LinkedIns |
+| `/careers` | "How we work" values list + application form |
+| `/pilot` | Pilot enrollment info + application form |
 | `/privacy` | Short honest note on data collected and why |
 
 **Navbar + Footer live in `layout.tsx`** (render on every page).
 
-**Nav pattern:** logo-left → centered links (Product, About, Team, Careers) → ONE button right ("Join Waitlist", terracotta). Single primary action — never multiple competing buttons.
+**Nav pattern:** logo-left → centered links (Product, Mission, Careers) → ONE button right ("Join the Pilot", charcoal). Single primary action — never multiple competing buttons.
 
 **Footer:** columned page links, company LinkedIn, company email, Careers + Privacy links. CTA may repeat.
 
@@ -118,9 +119,9 @@ Logos in `public/`: `Optics logo no bio.jpg` (primary), `Optics logo V2.jpg` (al
 
 ---
 
-## 9. Waitlist
+## 9. Pilot Program
 
-Embed a **Tally** form on `/waitlist` (Tally handles email notification + Google Sheet). No custom backend/API/database. If the embed URL isn't available yet, build the page with a labeled placeholder + privacy note. Include a one-line privacy note wherever emails are collected; keep `/privacy` honest.
+Embed the reusable **ContactForm** on `/pilot` (configured via `PILOT_FORM_CONFIG` in `constants.ts`). Include a one-line privacy note wherever emails are collected; keep `/privacy` honest.
 
 ---
 

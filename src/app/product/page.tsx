@@ -30,10 +30,10 @@ export default function ProductPage() {
       {/* 5. Terracotta CTA band — reusable component */}
       <CtaBand
         headline="See what smarter baking looks like."
-        subline="Join our early-access waitlist — 30-minute setup, no hardware required."
+        subline="Join our early-access pilot — 30-minute setup, no hardware required."
         ctaLabel={PRIMARY_CTA.label}
         ctaHref={PRIMARY_CTA.href}
-        ctaId="product-cta-band-join-waitlist"
+        ctaId="product-cta-band-join-pilot"
       />
     </main>
   );

@@ -25,7 +25,7 @@ export default function HomePage() {
         subline={HERO.onboarding}
         ctaLabel={PRIMARY_CTA.label}
         ctaHref={PRIMARY_CTA.href}
-        ctaId="home-cta-band-join-waitlist"
+        ctaId="home-cta-band-join-pilot"
       />
     </main>
   );

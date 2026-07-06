@@ -91,7 +91,7 @@ export default function Footer() {
           </p>
           <Link
             href={PRIMARY_CTA.href}
-            id="footer-join-waitlist"
+            id="footer-join-pilot"
             className="inline-flex items-center rounded-full bg-charcoal px-5 py-2 text-sm font-bold text-cream shadow-sm hover:opacity-90 transition-opacity duration-200"
           >
             {PRIMARY_CTA.label}

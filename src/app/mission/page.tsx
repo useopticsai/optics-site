@@ -21,7 +21,7 @@ export default function MissionPage() {
         subline={CLOSING_CTA.subline}
         ctaLabel={PRIMARY_CTA.label}
         ctaHref={PRIMARY_CTA.href}
-        ctaId="mission-cta-band-join-waitlist"
+        ctaId="mission-cta-band-join-pilot"
       />
     </main>
   );
