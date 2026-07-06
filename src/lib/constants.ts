@@ -176,11 +176,91 @@ export const ABOUT =
     "Optics helps independent bakeries stop guessing how much to bake. It forecasts demand from network-wide and real-time signals to cut the overproduction waste that quietly erodes small bakeries' margins, without the cost and complexity of enterprise systems.";
 
 // ---- Careers ----
-export const CAREERS = {
-    headline: "We are growing. Come build with us.",
-    body: "If you care about this mission, we want to hear from you. Fill out the form or reach out directly. We would love to connect.",
-    // No specific open roles listed yet. Update when roles open.
+export interface FormFieldConfig {
+    name: string;
+    label: string;
+    type: "text" | "email" | "textarea" | "url" | "tel";
+    required?: boolean;
+    placeholder?: string;
+    rows?: number;
+}
+
+export const CAREERS_FORM_CONFIG: FormFieldConfig[] = [
+    {
+        name: "name",
+        label: "Name",
+        type: "text",
+        required: true,
+        placeholder: "Your full name",
+    },
+    {
+        name: "email",
+        label: "Email",
+        type: "email",
+        required: true,
+        placeholder: "you@example.com",
+    },
+    {
+        name: "message",
+        label: "What would you bring / why Optics?",
+        type: "textarea",
+        required: true,
+        rows: 5,
+        placeholder: "Tell us about your background, what you like to build, and why you want to work on food waste in independent bakeries.",
+    },
+    {
+        name: "links",
+        label: "Links (Portfolio, LinkedIn, GitHub, etc.)",
+        type: "text",
+        required: false,
+        placeholder: "https://linkedin.com/in/... or https://github.com/...",
+    },
+];
+
+export const CAREERS_FORM_MESSAGES = {
+    subject: "New Application — Optics Careers",
+    submitButton: "Send Application",
+    submittingButton: "Sending...",
+    successTitle: "Thanks — we'll be in touch.",
+    successBody: "We received your application and will review it carefully.",
+    errorTitle: "Something went wrong.",
+    errorFallback: "We couldn't send your application right now. Please try again or email us directly.",
+    unavailableTitle: "Form temporarily unavailable",
+    unavailableBody: "Our submission system is currently offline. Please apply by emailing us directly.",
+    requiredError: "This field is required.",
+    emailError: "Please enter a valid email address.",
 };
+
+export const CAREERS = {
+    headline: "Work on a problem that actually matters.",
+    intro: "We're a two-person team helping independent bakeries stop throwing away good food and good money. We move fast, go deep, and take the work seriously.",
+    valuesHeadline: "How we work.",
+    values: [
+        {
+            title: "Depth over breadth",
+            body: "We'd rather understand one problem completely than skim across ten. If you like going deep, you'll fit in here.",
+        },
+        {
+            title: "Real ownership",
+            body: "There are two of us. You'd own something real, not a ticket in a backlog.",
+        },
+        {
+            title: "Honest by default",
+            body: "We frame what our technology is built to do, and we hold ourselves to it. That applies to how we work together too.",
+        },
+        {
+            title: "The mission matters",
+            body: "Food waste is a real problem with real cost. We're not building another lifestyle app.",
+        },
+    ],
+    rolesHeadline: "Hiring, but slowly.",
+    rolesBody: "We're a small team and we hire deliberately. If you think you have something to offer; a niche in AI and ML, engineering, product, or something else entirely then we'd love to hear from you.",
+    noOpenRoles: "No open roles at this time.",
+    applyHeading: "Apply to Optics",
+    preferEmailPrefix: "Prefer to email us directly? Reach us at ",
+    // No specific open roles yet.
+};
+
 
 // ---- Waitlist ----
 export const WAITLIST = {

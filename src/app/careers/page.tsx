@@ -1,8 +1,16 @@
+import type { Metadata } from "next";
+import CareersSection from "@/components/sections/CareersSection";
+
+export const metadata: Metadata = {
+  title: "Careers — Optics",
+  description:
+    "Work on a problem that actually matters: helping independent bakeries eliminate food waste with AI demand forecasting.",
+};
+
 export default function CareersPage() {
   return (
-    <main className="mx-auto max-w-4xl px-6 py-24">
-      <h1 className="text-4xl font-bold">Careers</h1>
-      <p className="mt-4 text-neutral-400">Placeholder — content coming.</p>
+    <main id="careers-content">
+      <CareersSection />
     </main>
   );
 }
