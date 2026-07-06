@@ -6,6 +6,7 @@ import { FormFieldConfig, CAREERS_FORM_MESSAGES } from "@/lib/constants";
 export interface ContactFormProps {
   fields: FormFieldConfig[];
   subject: string;
+  accessKey?: string;
   messages?: Partial<typeof CAREERS_FORM_MESSAGES>;
   className?: string;
 }
@@ -15,11 +16,11 @@ type FormStatus = "idle" | "submitting" | "success" | "error";
 export default function ContactForm({
   fields,
   subject,
+  accessKey,
   messages = {},
   className = "",
 }: ContactFormProps) {
   const msg = { ...CAREERS_FORM_MESSAGES, ...messages };
-  const apiKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
 
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMessage, setErrorMessage] = useState<string>("");
@@ -28,7 +29,7 @@ export default function ContactForm({
   const [botcheck, setBotcheck] = useState(false);
 
   // Graceful degradation when key is missing
-  if (!apiKey || apiKey.trim() === "" || apiKey === "YOUR_KEY_HERE") {
+  if (!accessKey || accessKey.trim() === "" || accessKey === "YOUR_KEY_HERE") {
     return (
       <div className={`rounded-2xl border border-line bg-cream/80 p-8 shadow-warm-md ${className}`}>
         <h3 className="mb-2 text-lg font-bold text-forest">{msg.unavailableTitle}</h3>
@@ -91,7 +92,7 @@ export default function ContactForm({
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: apiKey,
+          access_key: accessKey,
           subject,
           botcheck,
           ...formData,

@@ -102,6 +102,7 @@ export default function CareersSection() {
             <ContactForm
               fields={CAREERS_FORM_CONFIG}
               subject={CAREERS_FORM_MESSAGES.subject}
+              accessKey={process.env.NEXT_PUBLIC_WEB3FORMS_CAREERS_KEY}
               className="bg-cream shadow-warm-xl border-line"
             />
 

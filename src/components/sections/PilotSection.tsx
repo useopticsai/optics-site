@@ -115,6 +115,7 @@ export default function PilotSection() {
             <ContactForm
               fields={PILOT_FORM_CONFIG}
               subject={PILOT_FORM_MESSAGES.subject}
+              accessKey={process.env.NEXT_PUBLIC_WEB3FORMS_PILOT_KEY}
               messages={PILOT_FORM_MESSAGES}
               className="bg-cream shadow-warm-xl border-line"
             />
