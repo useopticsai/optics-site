@@ -135,14 +135,17 @@ export const VALUES = [
     {
         title: "Bakeries first",
         body: "We build for the shop floor, not the boardroom. If it does not help a baker at 5 a.m., it does not ship.",
+        image: "/values_pictures/bakeries_first.webp",
     },
     {
         title: "Honest numbers",
         body: "We frame what our technology is designed to do, and we do not dress up projections as proven results.",
+        image: "/values_pictures/honest_numbers.jpg",
     },
     {
         title: "Waste is the enemy",
         body: "Every decision points at the same goal: less thrown away, more sold, more margin kept.",
+        image: "/values_pictures/waste_enemy.jpg",
     },
 ];
 
@@ -156,6 +159,7 @@ export const TEAM = [
         focus:
             "Economic modeling and the architecture of the Bayesian forecasting engine.",
         linkedin: "https://www.linkedin.com/in/mohammad-alrahmah-05401528a/",
+        headshot: "/headshots/mohammad_headshot.jpg",
     },
     {
         name: "Hashem Alrahmah",
@@ -163,6 +167,7 @@ export const TEAM = [
         education: "Georgetown University, M.S. Data Science and Analytics",
         focus: "Production ML systems and scalable data pipelines.",
         linkedin: "https://www.linkedin.com/in/hashem-alrahmah/",
+        headshot: "/headshots/hashem_headshot.jpg",
     },
 ];
 
